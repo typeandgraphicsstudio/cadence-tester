@@ -6,6 +6,7 @@
 
 <title>Cadence Typeface Tester</title>
 
+<!-- Cadence -->
 <style>
 @font-face {
   font-family: "Cadence Demi-Serif Regular";
@@ -14,59 +15,83 @@
   font-weight: normal;
   font-style: normal;
 }
+</style>
 
+<!-- Montserrat UI -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:400&display=swap" rel="stylesheet">
+
+<style>
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background: #f4f4f4;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #000;
+  font-family: 'Montserrat', system-ui, sans-serif;
 }
 
 .wrapper {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.25rem 1rem 1.5rem;
 }
 
 .controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
   align-items: center;
   margin-bottom: 0.75rem;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
 }
 
 .controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   white-space: nowrap;
+}
+
+.controls input[type="range"] {
+  width: 110px;
+}
+
+.controls input[type="checkbox"] {
+  transform: translateY(1px);
 }
 
 textarea {
   width: 100%;
-  min-height: 320px;
-  padding: 1rem;
+  min-height: 340px;
+  padding: 0;
 
   font-family: "Cadence Demi-Serif Regular", serif;
   font-size: 60px;
   line-height: 1.2;
+  letter-spacing: 0em;
 
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
   resize: vertical;
 
-  background: #ffffff;
-  color: #000000;
+  background: transparent;
+  color: inherit;
 
   font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
   font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;
 }
 
+/* Dark mode */
+.dark {
+  background: #000;
+  color: #fff;
+}
+
 .dark textarea {
-  background: #000000;
-  color: #ffffff;
-  border-color: #444;
+  color: #fff;
 }
 </style>
 </head>
@@ -77,15 +102,21 @@ textarea {
 
   <div class="controls">
     <label>
-      Size:
+      Size
       <input type="range" min="40" max="150" value="60" id="size">
-      <strong><span id="sizeVal">60</span>px</strong>
+      <span id="sizeVal">60</span>px
     </label>
 
     <label>
-      Line height:
+      Line height
       <input type="range" min="1" max="1.6" step="0.05" value="1.2" id="line">
-      <strong><span id="lineVal">1.2</span></strong>
+      <span id="lineVal">1.2</span>
+    </label>
+
+    <label>
+      Tracking
+      <input type="range" min="-0.05" max="0.3" step="0.01" value="0" id="track">
+      <span id="trackVal">0</span>em
     </label>
 
     <label>
@@ -109,28 +140,36 @@ The quick brown fox jumps over the lazy dog.
 </div>
 
 <script>
-const box = document.getElementById("box");
-const size = document.getElementById("size");
-const line = document.getElementById("line");
-const dark = document.getElementById("dark");
-const wrap = document.getElementById("wrap");
+const box   = document.getElementById("box");
+const wrap  = document.getElementById("wrap");
 
-const sizeVal = document.getElementById("sizeVal");
-const lineVal = document.getElementById("lineVal");
+const size  = document.getElementById("size");
+const line  = document.getElementById("line");
+const track = document.getElementById("track");
+const dark  = document.getElementById("dark");
 
-size.addEventListener("input", () => {
+const sizeVal  = document.getElementById("sizeVal");
+const lineVal  = document.getElementById("lineVal");
+const trackVal = document.getElementById("trackVal");
+
+size.oninput = () => {
   box.style.fontSize = size.value + "px";
   sizeVal.textContent = size.value;
-});
+};
 
-line.addEventListener("input", () => {
+line.oninput = () => {
   box.style.lineHeight = line.value;
   lineVal.textContent = line.value;
-});
+};
 
-dark.addEventListener("change", () => {
-  wrap.classList.toggle("dark");
-});
+track.oninput = () => {
+  box.style.letterSpacing = track.value + "em";
+  trackVal.textContent = track.value;
+};
+
+dark.onchange = () => {
+  document.body.classList.toggle("dark");
+};
 </script>
 
 </body>
