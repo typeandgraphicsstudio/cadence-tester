@@ -1,153 +1,137 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadence Typeface Tester</title>
+
+<style>
+@font-face {
+  font-family: "Cadence Demi-Serif Regular";
+  src: url("https://static1.squarespace.com/static/5366ba53e4b06c698128d106/t/6960ef91605e0061284b56a7/1767960465367/Cadence-Demi-Serif%E2%80%93Regular.woff")
+       format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 14px;
+}
+
+.controls label {
+  white-space: nowrap;
+}
+
+textarea {
+  width: 100%;
+  min-height: 320px;
+  padding: 1rem;
+
+  font-family: "Cadence Demi-Serif Regular", serif;
+  font-size: 60px;
+  line-height: 1.2;
+
+  border: 1px solid #ccc;
+  resize: vertical;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+  font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;
+}
+
+.dark textarea {
+  background: #000000;
+  color: #ffffff;
+  border-color: #444;
+}
+</style>
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;title&gt;Cadence Typeface Tester&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">@font-face {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: "Cadence Demi-Serif Regular";</p>
-<p class="p1"><span class="Apple-converted-space">  </span>src: url("https://static1.squarespace.com/static/5366ba53e4b06c698128d106/t/6960ef91605e0061284b56a7/1767960465367/Cadence-Demi-Serif%E2%80%93Regular.woff")</p>
-<p class="p1"><span class="Apple-converted-space">       </span>format("woff");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-weight: normal;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-style: normal;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">* {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>box-sizing: border-box;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">body {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: #f4f4f4;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.wrapper {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>max-width: 1000px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 1rem;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.controls {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>gap: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 14px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.controls label {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>white-space: nowrap;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">textarea {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>min-height: 320px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 1rem;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: "Cadence Demi-Serif Regular", serif;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.2;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>resize: vertical;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #000000;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-variant-ligatures: common-ligatures discretionary-ligatures contextual;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.dark textarea {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: #000000;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border-color: #444;</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="wrapper" id="wrap"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="controls"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Size:</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="range" min="40" max="150" value="60" id="size"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;&lt;span id="sizeVal"&gt;60&lt;/span&gt;px&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/label&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Line height:</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="range" min="1" max="1.6" step="0.05" value="1.2" id="line"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;&lt;span id="lineVal"&gt;1.2&lt;/span&gt;&lt;/strong&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/label&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="checkbox" id="dark"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Dark background</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;textarea id="box"&gt;</p>
-<p class="p1">Cadence Demi-Serif</p>
-<p class="p2"><br></p>
-<p class="p1">ct ff ffi ffl fi fl st tf tt</p>
-<p class="p2"><br></p>
-<p class="p1">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-<p class="p1">abcdefghijklmnopqrstuvwxyz</p>
-<p class="p1">0123456789</p>
-<p class="p2"><br></p>
-<p class="p1">The quick brown fox jumps over the lazy dog.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/textarea&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">const box = document.getElementById("box");</p>
-<p class="p1">const size = document.getElementById("size");</p>
-<p class="p1">const line = document.getElementById("line");</p>
-<p class="p1">const dark = document.getElementById("dark");</p>
-<p class="p1">const wrap = document.getElementById("wrap");</p>
-<p class="p2"><br></p>
-<p class="p1">const sizeVal = document.getElementById("sizeVal");</p>
-<p class="p1">const lineVal = document.getElementById("lineVal");</p>
-<p class="p2"><br></p>
-<p class="p1">size.addEventListener("input", () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>box.style.fontSize = size.value + "px";</p>
-<p class="p1"><span class="Apple-converted-space">  </span>sizeVal.textContent = size.value;</p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">line.addEventListener("input", () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>box.style.lineHeight = line.value;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>lineVal.textContent = line.value;</p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">dark.addEventListener("change", () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>wrap.classList.toggle("dark");</p>
-<p class="p1">});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<div class="wrapper" id="wrap">
+
+  <div class="controls">
+    <label>
+      Size:
+      <input type="range" min="40" max="150" value="60" id="size">
+      <strong><span id="sizeVal">60</span>px</strong>
+    </label>
+
+    <label>
+      Line height:
+      <input type="range" min="1" max="1.6" step="0.05" value="1.2" id="line">
+      <strong><span id="lineVal">1.2</span></strong>
+    </label>
+
+    <label>
+      <input type="checkbox" id="dark">
+      Dark background
+    </label>
+  </div>
+
+  <textarea id="box">
+Cadence Demi-Serif
+
+ct ff ffi ffl fi fl st tf tt
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+The quick brown fox jumps over the lazy dog.
+  </textarea>
+
+</div>
+
+<script>
+const box = document.getElementById("box");
+const size = document.getElementById("size");
+const line = document.getElementById("line");
+const dark = document.getElementById("dark");
+const wrap = document.getElementById("wrap");
+
+const sizeVal = document.getElementById("sizeVal");
+const lineVal = document.getElementById("lineVal");
+
+size.addEventListener("input", () => {
+  box.style.fontSize = size.value + "px";
+  sizeVal.textContent = size.value;
+});
+
+line.addEventListener("input", () => {
+  box.style.lineHeight = line.value;
+  lineVal.textContent = line.value;
+});
+
+dark.addEventListener("change", () => {
+  wrap.classList.toggle("dark");
+});
+</script>
+
 </body>
 </html>
