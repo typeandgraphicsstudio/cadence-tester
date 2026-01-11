@@ -6,21 +6,15 @@
 
 <title>Cadence Typeface Tester</title>
 
-<!-- Cadence -->
 <style>
 @font-face {
   font-family: "Cadence Demi-Serif Regular";
   src: url("https://static1.squarespace.com/static/5366ba53e4b06c698128d106/t/6960ef91605e0061284b56a7/1767960465367/Cadence-Demi-Serif%E2%80%93Regular.woff")
        format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
-</style>
 
-<!-- Montserrat UI -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:400&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400&display=swap');
 
-<style>
 * {
   box-sizing: border-box;
 }
@@ -33,19 +27,18 @@ body {
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1.25rem 1rem 1.5rem;
 }
 
 .controls {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.25rem;
   align-items: center;
-  margin-bottom: 0.75rem;
   font-size: 13px;
   letter-spacing: 0.02em;
+  margin-bottom: 1rem;
 }
 
 .controls label {
@@ -59,26 +52,19 @@ body {
   width: 110px;
 }
 
-.controls input[type="checkbox"] {
-  transform: translateY(1px);
-}
+/* === TYPE TEST LINE === */
 
-textarea {
-  width: 100%;
-  min-height: 340px;
-  padding: 0;
-
+.tester {
   font-family: "Cadence Demi-Serif Regular", serif;
-  font-size: 60px;
-  line-height: 1.2;
+  font-size: 72px;
+  line-height: 1.15;
   letter-spacing: 0em;
 
-  border: none;
-  outline: none;
-  resize: vertical;
+  white-space: nowrap;
+  overflow: hidden;
 
-  background: transparent;
-  color: inherit;
+  outline: none;
+  cursor: text;
 
   font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
   font-feature-settings: "liga" 1, "clig" 1, "dlig" 1, "calt" 1;
@@ -90,7 +76,7 @@ textarea {
   color: #fff;
 }
 
-.dark textarea {
+.dark .tester {
   color: #fff;
 }
 </style>
@@ -103,14 +89,14 @@ textarea {
   <div class="controls">
     <label>
       Size
-      <input type="range" min="40" max="150" value="60" id="size">
-      <span id="sizeVal">60</span>px
+      <input type="range" min="40" max="150" value="72" id="size">
+      <span id="sizeVal">72</span>px
     </label>
 
     <label>
       Line height
-      <input type="range" min="1" max="1.6" step="0.05" value="1.2" id="line">
-      <span id="lineVal">1.2</span>
+      <input type="range" min="0.9" max="1.4" step="0.05" value="1.15" id="line">
+      <span id="lineVal">1.15</span>
     </label>
 
     <label>
@@ -125,17 +111,14 @@ textarea {
     </label>
   </div>
 
-  <textarea id="box">
-Cadence Demi-Serif
-
-ct ff ffi ffl fi fl st tf tt
-
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-0123456789
-
-The quick brown fox jumps over the lazy dog.
-  </textarea>
+  <div
+    id="box"
+    class="tester"
+    contenteditable="true"
+    spellcheck="false"
+  >
+élégance — lumière — cadence — mémoire — silence
+  </div>
 
 </div>
 
